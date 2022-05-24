@@ -1,6 +1,6 @@
 # Predicción de la demanda de múltiples ítems
 
-El poder predecir de forma precisa la demanda de cierto producto es de gran interés para el Retail o empresas importadoras, ya que esta información sirve para determina la cantidad de producto que debe ser incluido en la solicitud de importación, identificar los productos y la cantidad, que deben ser enviado a los distintos locales (tienda, almacén, centro de distribución, etc.). Además, es de ayuda para decidir si es buen momento para liquidar los productos que están en estantería o para realizar planificación de rutas optimas, entre otros.\
+El poder predecir de forma precisa la demanda de cierto producto es de gran interés para el Retail o empresas importadoras, ya que esta información sirve para determina la cantidad de producto que debe ser incluido en la solicitud de importación, identificar los productos y la cantidad, que deben ser enviado a los distintos locales (tienda, almacén, centro de distribución, etc.), entre otros.\
 \
 Generar pronósticos precisos es una tarea bastante difícil y aún más, lo es el predecir la demanda de múltiples ítems.  Esto debido a la influencia que pueden tener distintos factores sobre la venta de los productos, entre ellos: La estacionalidad anual, el día de la semana, el tiempo desde la mayor venta, la velocidad de consumo de un producto, el total de ventas realizada días anteriores, la competencia entre productos. etc.\
 \
