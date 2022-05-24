@@ -2,16 +2,18 @@
 
 El poder predecir de forma precisa la demanda de cierto producto es de gran interés para el Retail o empresas importadoras, ya que esta información sirve para determina la cantidad de producto que debe ser incluido en la solicitud de importación, identificar los productos y la cantidad, que deben ser enviado a los distintos locales (tienda, almacén, centro de distribución, etc.), entre otros.\
 \
-Generar pronósticos precisos es una tarea bastante difícil y aún más, lo es el predecir la demanda de múltiples ítems.  Esto debido a la influencia que pueden tener distintos factores sobre la venta de los productos, entre ellos: La estacionalidad anual, el día de la semana, el tiempo desde la mayor venta, la velocidad de consumo de un producto, el total de ventas realizada días anteriores, la competencia entre productos. etc.\
+Generar pronósticos precisos es una tarea bastante difícil y aún más, lo es el predecir la demanda de múltiples ítems.  Esto debido a la influencia que pueden tener distintos factores sobre la venta de los productos, entre ellos: La estacionalidad anual, el día de la semana, el tiempo desde la mayor venta, la competencia entre productos. etc.\
 \
-En este repositorio encontraran el desarrollo metodológico para predecir, a través de Machine Learning, la demanda de 50 items en 10 tiendas distintas, para ello se puso en cuestionamiento la estrategia tradicional para realizar predicciones a través de series de tiempo y se utilizó cada día de data como fecha de referencia para predecir el futuro en base a múltiples variables del pasado, en particular:
+En este repositorio encontraran el desarrollo metodológico para predecir, a través de Machine Learning, la demanda de 50 items en 10 tiendas distintas. Se utilizó cada día de ventas registradas como fecha de referencia para predecir las ventas en el futuro en base a múltiples variables del pasado, en particular:
 
 * Se utilizó el modelo XGboost, una metodología que se basa en árboles de decisiones.
+
 * Se utilizó una base de datos de ventas históricas de 50 items en 10 tiendas, que contenía 5 años de información de ventas diaria. Los datos fueron descargados desde la página de Kaggle: 
 https://www.kaggle.com/competitions/demand-forecasting-kernels-only/data
+
 * A partir de los datos se construyeron 50 variables a predecir, que corresponden a la venta total de cada ítem en los próximos 7 días (sin incluir el día de referencia), para cada una de las tiendas.
 
-* Como variable explicativa se construyeron variables que permitiesen determinar el promedio, el máximo, el mínimo, el total, número de días desde la mayor venta, número de días desde la menor venta, entre otras, para cada uno de los ítems en los últimos 21 días anteriores a la fecha de referencia. Además, se crearon variables relacionadas con la estacionalidad, obteniéndose como resultado cerca de 500 variables explicativas relacionadas a las ventas de cada tienda.
+* Como variable explicativa se construyeron variables que permitiesen determinar el promedio, el máximo, el mínimo, el total, número de días desde la mayor venta, número de días desde la menor venta, entre otras, para cada uno de los ítems en los 21 días anteriores a la fecha de referencia. Además, se crearon variables relacionadas con la estacionalidad, obteniéndose como resultado cerca de 500 variables explicativas relacionadas a las ventas de cada tienda-perido.
 
 * El modelo fue construido a través de una muestra de construcción, ajustado con una muestra de validación y testeado en una muestra test. Finalmente, el desempeño del modelo fue estimado a través del error porcentual. 
 
@@ -40,7 +42,7 @@ Para la construcción de variables, se utilizó cada registro de ventas como una
 
 # Desempeño del modelo
 
-A continuación se muestra las ventas totales reales y predichas durante una semana, para el item_8 en 3 tiendas distintas
+A modo de ejemplo, se muestra las ventas totales reales y predichas durante una semana, para el item_8 en 3 tiendas distintas
 
 [![resultados.png](https://i.postimg.cc/yYtMpYgQ/resultados.png)](https://postimg.cc/BX57X3CH)
 
