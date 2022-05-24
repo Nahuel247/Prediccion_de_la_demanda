@@ -48,4 +48,6 @@ Para asegurar la robustes del modelo se evaluó el desempeño del modelo sobre t
 
 [![Desempe-o-del-modelo.jpg](https://i.postimg.cc/wMM8thcx/Desempe-o-del-modelo.jpg)](https://postimg.cc/ygMrt3b2)
 
+A continuación se muestra las ventas totales reales y predichas durante una semana, para el item_8 en 3 tiendas distintas
 
+[![resultados.png](https://i.postimg.cc/T274KHCr/resultados.png)](https://postimg.cc/grhD549J)
