@@ -34,7 +34,7 @@ El modelo fue construido a través de una muestra de construcción, ajustado con
 [![Segmentaci-n-de-la-muestra.jpg](https://i.postimg.cc/8zsgLbN6/Segmentaci-n-de-la-muestra.jpg)](https://postimg.cc/WdRyvgDN)
 
 # Construcción de variables
-Para la construcción de variables, se utilizó cada registro de ventas como una “fecha de referencia”, es decir, para cada registro se estimó la cantidad de producto que se va vender en los próximos 7 días y a su vez se utilizaron los 21 días anteriores para construir las variables explicativas. En ambos casos no se utilizó el día de referencia en los cálculos, ya que muchas veces cuando se quiere implementar el modelo, las ventas del mismo día no se han cerrado.
+Para la construcción de variables, se utilizó cada registro de ventas como una “fecha de referencia”, es decir, para cada registro se estimó la cantidad de producto que se va vender en los próximos 7 días y a su vez se utilizaron los 21 días anteriores para construir las variables explicativas (500 variables). En ambos casos no se utilizó el día de referencia en los cálculos, ya que muchas veces cuando se quiere implementar el modelo, las ventas del mismo día no se han cerrado.
 
 [![variables.jpg](https://i.postimg.cc/kXbrvSfh/variables.jpg)](https://postimg.cc/56bkxXcw)
 
@@ -47,10 +47,11 @@ A continuación se muestra las ventas totales reales y predichas durante una sem
 
 El desempeño del modelo fue medido como el % de registros cuyo error porcentual de las ventas predichas es menor a un 10% a la del valor real.
  
-Error porcentual = (valor estimado - valor real) / valor real × 100% (en valor absoluto)\
-\
+Error porcentual = (valor estimado - valor real) / valor real × 100% (en valor absoluto)
+
+[![Desempe-o-del-modelo.jpg](https://i.postimg.cc/wMM8thcx/Desempe-o-del-modelo.jpg)](https://postimg.cc/ygMrt3b2)
+
 Los resultados indican que en construcción (train) el modelo muestra una alta capacidad predictiva, se puede observar que el 90% de los registros tienen un error porcentual menor al 10%. Por otro lado, durante la validación se observa que el 63% de los registros tienen un error porcentual menor al 10% alcanzando un 84% con un 15% de error porcentual y al 95% con un error porcentual del 20%. Lo cual indicaría un leve sobreajuste pero el modelo está siendo altamente eficiente.
 
 Para asegurar la robustes del modelo se evaluó el desempeño del modelo sobre todo el periodo 2017 – 2018. Los resultados mostraron ser altamente consistente con los logrados durante la validación, por lo cual, se sostiene que el modelo es robusto y tiene poco sobre ajuste, por lo cual, puede ser llevado a producción.
 
-[![Desempe-o-del-modelo.jpg](https://i.postimg.cc/wMM8thcx/Desempe-o-del-modelo.jpg)](https://postimg.cc/ygMrt3b2)
