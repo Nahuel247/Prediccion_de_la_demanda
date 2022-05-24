@@ -20,17 +20,17 @@ A continuación, se presentan aquellos resultados más relevantes relacionados a
 # Comportamiento de la demanda en distintas tiendas.
 A modo de ejemplo, se muestra la serie de tiempo de ventas diarias de 4 items en las distintas tiendas, durante un periodo de 5 años. Es posible observar estacionalidad en las ventas.
 
-[![Comportamiento-demanda-4-items-10-store.png](https://i.postimg.cc/3x7CNM6J/Comportamiento-demanda-4-items-10-store.png)](https://postimg.cc/QH4WYzhR)
+[![Comportamiento-demanda-4-items-10-store.png](https://i.postimg.cc/dQdMB0b5/Comportamiento-demanda-4-items-10-store.png)](https://postimg.cc/K4ZscmvT)
 
 #  Comportamiento de la demanda para el item_8 en distintas tiendas.
 A modo de ejemplo, se muestra la serie de ventas del item_8 según tienda. Es posible observar un incremento de las ventas del producto a lo largo del tiempo.
 
-[![Ventas-item1-10store.png](https://i.postimg.cc/Qt4KXw7C/Ventas-item1-10store.png)](https://postimg.cc/5Yz2gPnW)
+[![Ventas-item8-10store.png](https://i.postimg.cc/43CVpBVL/Ventas-item8-10store.png)](https://postimg.cc/MnDnS0sV)
 
 # Segmentación de la muestra
 El modelo fue construido a través de una muestra de construcción, ajustado con una muestra de validación y testeado en una muestra de testeo.  La primera parte de la data fue utilizada para la construcción, la segunda parte para la validación y la última parte para el testeo. Esta forma de segmentación asegura que el modelo sea funcional en el futuro.
 
-[![Segmentaci-n-de-la-muestra.jpg](https://i.postimg.cc/RVkBkdWB/Segmentaci-n-de-la-muestra.jpg)](https://postimg.cc/hf16x98y)
+[![Segmentaci-n-de-la-muestra.jpg](https://i.postimg.cc/8zsgLbN6/Segmentaci-n-de-la-muestra.jpg)](https://postimg.cc/WdRyvgDN)
 
 # Construcción de variables
 Para la construcción de variables, se utilizó cada registro de ventas como una “fecha de referencia”, es decir, para cada registro se estimó la cantidad de producto que se va vender en los próximos 7 días y a su vez se utilizaron los 21 días anteriores para construir las variables explicativas. En ambos casos no se utilizó el día de referencia en los cálculos, ya que muchas veces cuando se quiere implementar el modelo, las ventas del mismo día no se han cerrado.
