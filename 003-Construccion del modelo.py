@@ -115,13 +115,14 @@ np.sum(abs(np.array(y_test_pred)-np.array(y_test))/np.array(y_test)<=0.20)/(y_te
 
 # Visualizamos los resultados
 
-y_test=y_test.assign(venta="real")
-y_test_pred=y_test_pred.assign(venta="predicha")
+y_test=y_test.assign(sales="actual value")
+y_test_pred=y_test_pred.assign(sales="predict value")
 
 resultados=pd.concat([y_test,y_test_pred])
-resultados["fecha_referencia"]=pd.to_datetime(resultados['fecha_referencia'])
+resultados["date"]=pd.to_datetime(resultados['fecha_referencia'])
 
-fig=sns.lineplot(data=resultados.query("store in [1, 3, 5]"), x="fecha_referencia", y="item8_total_F", hue="venta",
-             style="store", linewidth = 2)
-fig.set_ylabel("venta semanal total")
-fig.set_xlabel("Periodo")
+
+fig=sns.lineplot(data=resultados.query("store in [3, 5, 1]"), x="date", y="item8_total_F", hue="store",
+             style="sales", linewidth = 2, palette="tab10")
+fig.set_ylabel("sales")
+fig.set_xlabel("date")
