@@ -38,6 +38,12 @@ Para la construcción de variables, se utilizó cada registro de ventas como una
 [![variables.jpg](https://i.postimg.cc/kXbrvSfh/variables.jpg)](https://postimg.cc/56bkxXcw)
 
 # Desempeño del modelo
+
+A continuación se muestra las ventas totales reales y predichas durante una semana, para el item_8 en 3 tiendas distintas
+
+[![resultados.png](https://i.postimg.cc/yYtMpYgQ/resultados.png)](https://postimg.cc/BX57X3CH)
+
+
 El desempeño del modelo fue medido como el % de registros cuyo error porcentual de las ventas predichas es menor a un 10% a la del valor real.
  
 Error porcentual = (valor estimado - valor real) / valor real × 100% (en valor absoluto)\
@@ -47,7 +53,3 @@ Los resultados indican que en construcción (train) el modelo muestra una alta c
 Para asegurar la robustes del modelo se evaluó el desempeño del modelo sobre todo el periodo 2017 – 2018. Los resultados mostraron ser altamente consistente con los logrados durante la validación, por lo cual, se sostiene que el modelo es robusto y tiene poco sobre ajuste, por lo cual, puede ser llevado a producción.
 
 [![Desempe-o-del-modelo.jpg](https://i.postimg.cc/wMM8thcx/Desempe-o-del-modelo.jpg)](https://postimg.cc/ygMrt3b2)
-
-A continuación se muestra las ventas totales reales y predichas durante una semana, para el item_8 en 3 tiendas distintas
-
-[![resultados.png](https://i.postimg.cc/yYtMpYgQ/resultados.png)](https://postimg.cc/BX57X3CH)
