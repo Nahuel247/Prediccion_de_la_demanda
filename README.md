@@ -53,5 +53,5 @@ Error porcentual = (valor estimado - valor real) / valor real × 100% (en valor 
 
 Los resultados indican que en construcción (train) el modelo muestra una alta capacidad predictiva, se puede observar que el 90% de los registros tienen un error porcentual menor al 10%. Por otro lado, durante la validación se observa que el 63% de los registros tienen un error porcentual menor al 10% alcanzando un 84% con un 15% de error porcentual y al 95% con un error porcentual del 20%. Lo cual indicaría un leve sobreajuste pero el modelo está siendo altamente eficiente.
 
-Para asegurar la robustes del modelo se evaluó el desempeño del modelo sobre todo el periodo 2017 – 2018. Los resultados mostraron ser altamente consistente con los logrados durante la validación, por lo cual, se sostiene que el modelo es robusto y tiene poco sobre ajuste, por lo cual, puede ser llevado a producción.
+Para asegurar la robustes del modelo se evaluó el desempeño del modelo sobre todo el periodo 2017 – 2018 (test). Los resultados mostraron ser altamente consistente con los logrados durante la validación, por lo cual, se sostiene que el modelo es robusto y tiene poco sobre ajuste, por lo cual, puede ser llevado a producción.
 
