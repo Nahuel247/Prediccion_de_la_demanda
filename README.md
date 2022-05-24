@@ -33,7 +33,7 @@ A modo de ejemplo, se muestra la serie de ventas del item_8 según tienda. Es po
 # Segmentación de la muestra
 El modelo fue construido a través de una muestra de construcción, ajustado con una muestra de validación y testeado en una muestra de testeo.  La primera parte de la data fue utilizada para la construcción, la segunda parte para la validación y la última parte para el testeo. Esta forma de segmentación asegura que el modelo sea funcional en el futuro.
 
-[![Segmentaci-n-de-la-muestra.jpg](https://i.postimg.cc/8zsgLbN6/Segmentaci-n-de-la-muestra.jpg)](https://postimg.cc/WdRyvgDN)
+[![Segmentaci-n-de-la-muestra.jpg](https://i.postimg.cc/NFF6KBjH/Segmentaci-n-de-la-muestra.jpg)](https://postimg.cc/kRr6Zr8J)
 
 # Construcción de variables
 Para la construcción de variables, se utilizó cada registro de ventas como una “fecha de referencia”, es decir, para cada registro se estimó la cantidad de producto que se va vender en los próximos 7 días y a su vez se utilizaron los 21 días anteriores para construir las variables explicativas (500 variables). En ambos casos no se utilizó el día de referencia en los cálculos, ya que muchas veces cuando se quiere implementar el modelo, las ventas del mismo día no se han cerrado.
@@ -44,14 +44,13 @@ Para la construcción de variables, se utilizó cada registro de ventas como una
 
 A modo de ejemplo, se muestra las ventas totales reales y predichas durante una semana, para el item_8 en 3 tiendas distintas
 
-[![resultados.png](https://i.postimg.cc/yYtMpYgQ/resultados.png)](https://postimg.cc/BX57X3CH)
-
+[![resultados.png](https://i.postimg.cc/J0hhmh49/resultados.png)](https://postimg.cc/dkzFjwCB)
 
 El desempeño del modelo fue medido como el % de registros cuyo error porcentual de las ventas predichas es menor a un 10% a la del valor real.
  
 Error porcentual = (valor estimado - valor real) / valor real × 100% (en valor absoluto)
 
-[![Desempe-o-del-modelo.jpg](https://i.postimg.cc/wMM8thcx/Desempe-o-del-modelo.jpg)](https://postimg.cc/ygMrt3b2)
+[![Sin-t-tulo.jpg](https://i.postimg.cc/HW943vyK/Sin-t-tulo.jpg)](https://postimg.cc/z33gGjpS)
 
 Los resultados indican que en construcción (train) el modelo muestra una alta capacidad predictiva, se puede observar que el 90% de los registros tienen un error porcentual menor al 10%. Por otro lado, durante la validación se observa que el 63% de los registros tienen un error porcentual menor al 10% alcanzando un 84% con un 15% de error porcentual y al 95% con un error porcentual del 20%. Lo cual indicaría un leve sobreajuste pero el modelo está siendo altamente eficiente.
 
