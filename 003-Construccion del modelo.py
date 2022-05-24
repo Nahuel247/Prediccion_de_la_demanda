@@ -42,7 +42,7 @@ variable_respuesta= ["item"+str(i+1)+"_total_F" for i in range(50)]
 X_pretrain =data_artificial.loc[data_artificial["base"]=="train",:].drop(variable_respuesta+['fecha_referencia', 'base'],axis=1).copy()
 y_pretrain = data_artificial.loc[data_artificial["base"]=="train",variable_respuesta].copy()
 X_test =data_artificial.loc[data_artificial["base"]=="test",:].drop(variable_respuesta+['fecha_referencia', 'base'],axis=1).copy()
-y_test = data_artificial.loc[data_artificial["base"]=="test",variable_respuesta].copy()
+y_test = data_artificial.loc[data_artificial["base"]=="test",["fecha_referencia","store"]+variable_respuesta].copy()
 
 
 # segmentamos pretrain para crear una muestra de entrenamiento y otra de validación,
@@ -99,7 +99,8 @@ np.sum(abs(np.array(y_validation_pred)-np.array(y_validation))/np.array(y_valida
 # DESEMPEÑO DEL MODELO EN TEST
 ####################################
 
-y_test_pred=pd.DataFrame(modelo.predict(X_test))
+y_test_pred=pd.DataFrame(modelo.predict(X_test)).reset_index().drop("index",axis=1)
+y_test_pred=pd.concat([y_test.loc[:,["fecha_referencia","store"]].reset_index().drop("index",axis=1),y_test_pred],axis=1)
 y_test_pred.columns=y_test.columns
 
 # Error cuadratico medio (RMSE)
@@ -111,3 +112,16 @@ np.sum(abs(np.array(y_test_pred)-np.array(y_test))/np.array(y_test)<=0.10)/(y_te
 np.sum(abs(np.array(y_test_pred)-np.array(y_test))/np.array(y_test)<=0.15)/(y_test.size)
 np.sum(abs(np.array(y_test_pred)-np.array(y_test))/np.array(y_test)<=0.20)/(y_test.size)
 
+
+# Visualizamos los resultados
+
+y_test=y_test.assign(venta="real")
+y_test_pred=y_test_pred.assign(venta="predicha")
+
+resultados=pd.concat([y_test,y_test_pred])
+resultados["fecha_referencia"]=pd.to_datetime(resultados['fecha_referencia'])
+
+fig=sns.lineplot(data=resultados.query("store in [1, 3, 5]"), x="fecha_referencia", y="item8_total_F", hue="venta",
+             style="store", linewidth = 2)
+fig.set_ylabel("venta semanal total")
+fig.set_xlabel("Periodo")

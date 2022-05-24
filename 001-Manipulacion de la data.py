@@ -50,15 +50,12 @@ data_pivot.to_csv("data_pivot.csv", sep=";")
 ##############################
 # VISUALIZAMOS ALGUNOS CASOS
 ##############################
+sns.set(font_scale=1.3)
 
 # Comportamiento e interrelación entre la venta de distintos items
 sns.relplot(data=data.query('(item in ["item_1","item_3", "item_8","item_50"])').sample(9000).copy(), x="date",
-            y="sales", hue="item", style="store", palette="tab10")
-
+            y="sales", hue="item", style="store", palette="tab10",s=80)
 
 # Comportamiento de la demanda para el item_8 en distintas tiendas
 sns.relplot(data=data.query( 'item=="item_8"').sample(8000).copy(), x="date", y="sales",
              hue="store", palette="tab10", marker="o",edgecolor="none")
-
-
-
