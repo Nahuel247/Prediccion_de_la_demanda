@@ -44,7 +44,7 @@ Para la construcción de variables, se utilizó cada registro de ventas como una
 
 A modo de ejemplo, se muestra las ventas totales reales y predichas durante una semana, para el item_8 en 3 tiendas distintas
 
-[![resultados.png](https://i.postimg.cc/J0hhmh49/resultados.png)](https://postimg.cc/dkzFjwCB)
+[![resultados.png](https://i.postimg.cc/mk0dxc82/resultados.png)](https://postimg.cc/1Vr0w3kL)
 
 El desempeño del modelo fue medido como el % de registros cuyo error porcentual de las ventas predichas es menor a un 10% a la del valor real.
  
