@@ -20,7 +20,7 @@ A continuación, se presentan aquellos resultados más relevantes relacionados a
 # Comportamiento de la demanda en distintas tiendas.
 A modo de ejemplo, se muestra la serie de tiempo de ventas diarias de 4 items en las distintas tiendas, durante un periodo de 5 años. Es posible observar estacionalidad en las ventas.
 
-[![Comportamiento-demanda-4-items-10-store.png](https://i.postimg.cc/dQdMB0b5/Comportamiento-demanda-4-items-10-store.png)](https://postimg.cc/K4ZscmvT)
+[![Comportamiento-demanda-4-items-10-store.png](https://i.postimg.cc/N0DNbKYr/Comportamiento-demanda-4-items-10-store.png)](https://postimg.cc/3yyCxJkK)
 
 #  Comportamiento de la demanda para el item_8 en distintas tiendas.
 A modo de ejemplo, se muestra la serie de ventas del item_8 según tienda. Es posible observar un incremento de las ventas del producto a lo largo del tiempo.
