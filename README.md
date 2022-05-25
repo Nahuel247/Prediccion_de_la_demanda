@@ -42,7 +42,7 @@ Para la construcción de variables, se utilizó cada registro de ventas como una
 
 # Desempeño del modelo
 
-A modo de ejemplo, se muestra las ventas totales reales y predichas durante una semana, para el item_8 en 3 tiendas distintas
+A modo de ejemplo, se muestra las ventas totales reales y predichas durante una semana, para el item_8 en 3 tiendas distintas. Es posible observar que el valor predicho se acerca bastante a la ventas observada en la tienda 1 y 5, a diferencia de lo que sucede en la tienda 3 donde no se alcanza a emular las ventas máximas, esto podría deberse a la estrategías de ventas que se realizan particularmente en esta tienda, como por ejemplo la creación de ofertas para lograr mayores ventas, que podrían ser considerados en la construcción de un modelo en el futuro.
 
 [![resultados.png](https://i.postimg.cc/mk0dxc82/resultados.png)](https://postimg.cc/1Vr0w3kL)
 
