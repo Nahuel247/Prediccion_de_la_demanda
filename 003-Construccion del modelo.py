@@ -1,7 +1,7 @@
 
 ###################################################################################
-#                  PROYECTO: MODELO PARA PREDECIR LA DEMANDA
-#                        CON INTELIGENCIA ARTIFICIAL
+#             PROYECTO: MODELO PARA PREDECIR LA DEMANDA DE PRODUCTOS
+#                             CON MACHINE LEARNING
 ###################################################################################
 
 #######################################
