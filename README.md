@@ -1,8 +1,8 @@
 # Predicción de la demanda de múltiples ítems
 
-El poder predecir de forma precisa la demanda de cierto producto es de gran interés para el Retail o empresas importadoras, ya que esta información sirve para determina la cantidad de producto que debe ser incluido en la solicitud de importación, identificar los productos y la cantidad, que deben ser enviado a los distintos locales (tienda, almacén, centro de distribución, etc.), entre otros.\
+El poder predecir de forma precisa la demanda de producto es de gran interés para el Retail o empresas importadoras, ya que esta información sirve para determina la cantidad de producto que debe ser incluido en la solicitud de importación, identificar la cantidad de producto que deben ser enviado a distintos locales (tienda, almacén, centro de distribución, etc.), entre otros.\
 \
-Generar pronósticos precisos es una tarea bastante difícil y aún más, lo es el predecir la demanda de múltiples ítems.  Esto debido a la influencia que pueden tener distintos factores sobre la venta de los productos, entre ellos: La estacionalidad anual, el día de la semana, el tiempo desde la mayor venta, la competencia entre productos. etc.\
+Sin embargo, es una tarea bastante difícil y aún más, lo es el predecir la demanda de múltiples ítems.  Esto debido al efecto que pueden tener factores tales cómo: La estacionalidad anual, el día de la semana, el tiempo desde la mayor venta, la competencia entre productos, el desarrollar ofertas, etc.\
 \
 En este repositorio encontraran el desarrollo metodológico para predecir, a través de Machine Learning, la demanda de 50 items en 10 tiendas distintas. Se utilizó cada día de ventas registradas como fecha de referencia para predecir las ventas en el futuro en base a múltiples variables del pasado, en particular:
 
@@ -42,7 +42,7 @@ Para la construcción de variables, se utilizó cada registro de ventas como una
 
 # Desempeño del modelo
 
-A modo de ejemplo, se muestra las ventas totales reales y predichas durante una semana, para el item_8 en 3 tiendas distintas. Es posible observar que el valor predicho se acerca bastante a la ventas observada en la tienda 1 y 5, a diferencia de lo que sucede en la tienda 3 donde no se alcanza a emular las ventas máximas, esto podría deberse a la estrategías de ventas que se realizan particularmente en esta tienda, como por ejemplo la creación de ofertas para lograr mayores ventas, que podrían ser considerados en la construcción de un modelo en el futuro.
+A modo de ejemplo, se muestra las ventas totales reales y predichas durante una semana, para el item_8 en 3 tiendas distintas. Es posible observar que el valor predicho se acerca bastante a la ventas observada en la tienda 1 y 5, a diferencia de lo que sucede en la tienda 3 donde no se alcanza a emular las ventas máximas, esto podría deberse a la estrategías de ventas que se realizan particularmente en esta tienda, como por ejemplo la creación de ofertas para lograr mayores ventas, que serán incluidos en la construcción de un próximo modelo.
 
 [![resultados.png](https://i.postimg.cc/mk0dxc82/resultados.png)](https://postimg.cc/1Vr0w3kL)
 
@@ -54,5 +54,5 @@ Error porcentual = (valor estimado - valor real) / valor real × 100% (en valor 
 
 Los resultados indican que en construcción (train) el modelo muestra una alta capacidad predictiva, se puede observar que el 90% de los registros tienen un error porcentual menor al 10%. Por otro lado, durante la validación se observa que el 63% de los registros tienen un error porcentual menor al 10% alcanzando un 84% con un 15% de error porcentual y al 95% con un error porcentual del 20%. Lo cual indicaría un leve sobreajuste pero el modelo está siendo altamente eficiente.
 
-Para asegurar la robustes del modelo se evaluó el desempeño del modelo sobre todo el periodo 2017 – 2018 (test). Los resultados mostraron ser altamente consistente con los logrados durante la validación, por lo cual, se sostiene que el modelo es robusto y tiene poco sobre ajuste, por lo cual, puede ser llevado a producción.
+Para asegurar la robustes del modelo se evaluó el desempeño del modelo sobre todo el periodo 2017 – 2018 (test). Los resultados mostraron ser altamente consistente con los logrados durante la validación, por lo cual, se sostiene que el modelo tiene una alta capacidad predictiva, es robusto y tiene poco sobre ajuste, por lo cual, puede ser llevado a producción.
 
